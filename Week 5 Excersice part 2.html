@@ -1,0 +1,45 @@
+<html>
+  <body>
+      <head>
+        <title>Emma's Week 5 Work</title>
+    <style>
+      form{
+        width: 500px;
+        margin: auto;
+        padding: 20 px;
+        background: #663366;
+        font-size: 20px;
+        font-family: Impact;
+        color: hotpink;
+      }
+      input[type =text]{
+        width: 80%
+        padding: 5px;
+        font-size: 18px;
+      }
+    </style>
+    </head>
+    <body>
+    <form>
+  Enter Name: <input type="text" name="name" id="name"><br />
+  Enter Birthday: <input type="date" id="birthday"><br />
+  <button type="button" id="myButton">Click Here for Age :)</button>
+
+  <script>
+  let myButton = document.getElementById('myButton');
+  myButton.addEventListener("click", function(){ getAge() });
+  function getAge(){
+    var newDate = new Date(document.getElementById('birthday').value);
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var bYear = newDate.getFullYear();
+    today = yyyy - newDate.getFullYear();
+    document.write(document.getElementById('name').value);
+    document.write(' is age ');
+    document.write(today);
+    document.write(' born in year ');
+    document.write(bYear);
+    document.write('.')
+  }
+</script>
+</html>
